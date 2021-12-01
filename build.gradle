@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.7.2'
+}
+
+group pluginGroup
+version pluginVersion
+
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+}
+
+intellij {
+    version platformVersion
+    updateSinceUntilBuild = false
+    type platformType
+    plugins = ['IntelliLang', 'java']
+    ideaDependencyCachePath = project.buildDir
+}
+
+buildSearchableOptions {
+    jbrVersion = '11_0_2b304'
+}
+
+jar {
+    manifestContentCharset 'utf-8'
+    metadataCharset 'utf-8'
+    from {
+        configurations.compile.collect {
+            // 打印出加入的依赖包, 便于检查
+            println("Including file: ${it.name}")
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+sourceSets {
+    main.java.srcDirs = ['src/main']
+    main.resources.srcDir 'resources'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

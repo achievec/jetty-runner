@@ -7,3 +7,9 @@ build/
 src/main/main.iml
 src/test/test.iml
 
+.gradle
+!.idea/icon*.png
+*.iml
+src/main/gen
+src/main/resources/templates.list
+src/main/resources/gitignore/*
