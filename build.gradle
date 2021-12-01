@@ -47,8 +47,8 @@ jar {
     }
 }
 sourceSets {
-    main.java.srcDirs = ['src/main']
-    main.resources.srcDir 'resources'
+    main.java.srcDirs = ['src/main/java']
+    main.resources.srcDir 'src/resources'
 }
 
 tasks.withType(JavaCompile) {
