@@ -13,3 +13,5 @@ src/test/test.iml
 src/main/gen
 src/main/resources/templates.list
 src/main/resources/gitignore/*
+
+bin 
