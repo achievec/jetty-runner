@@ -1,5 +1,8 @@
 Jetty-Runner
 ============
+在原有插件基础上 **修复了不能 Debug 问题** 
+
+
 A plugin that allows you to quickly run Jetty from IntelliJ IDEA. <br>
 <br>
 If you require full support please consider buying the IntelliJ IDEA Enterprise Edition. <br>
