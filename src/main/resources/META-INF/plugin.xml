@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>JettyRunner-GK</id>
     <name>IDEA Jetty Runner</name>
-    <version>1.4.14</version>
+    <version>2.0.0</version>
     <vendor email="guikeller@gmail.com" url="https://github.com/guikeller/jetty-runner">IntelliJ Jetty Runner</vendor>
 
     <description><![CDATA[
@@ -21,6 +21,13 @@
     <change-notes><![CDATA[
 Head over to <a href="https://github.com/guikeller/jetty-runner" target="_blank">GitHub</a> to see the latest change notes and learn more about this plugin. <br>
 Thanks for dropping by.
+
+        <p>v2.0.0</p>
+        <ul>
+            <li>
+                修复了原插件不能 Debug 的问题
+            </li>
+        </ul>
     ]]>
     </change-notes>
 
