@@ -38,9 +38,9 @@ Thanks for dropping by.
         <!-- Initialises the UI when the user selects the plugin from the menu -->
         <configurationType implementation="com.github.guikeller.jettyrunner.conf.JettyRunnerConfigurationType"/>
         <!-- Run - It reads the values written by the UI and spawns a new process that runs Jetty -->
-        <programRunner id="Run" implementation="com.github.guikeller.jettyrunner.runner.JettyProgramRunner" order="first"/>
+        <programRunner implementation="com.github.guikeller.jettyrunner.runner.JettyProgramRunner" order="first"/>
         <!-- Debug - same as run but stops on breakpoints, you get the idea -->
-        <programRunner id="Debug" implementation="com.github.guikeller.jettyrunner.runner.JettyProgramDebugger" order="last"/>
+        <programRunner implementation="com.github.guikeller.jettyrunner.runner.JettyProgramDebugger" order="last"/>
     </extensions>
 
 </idea-plugin>

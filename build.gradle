@@ -21,6 +21,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testImplementation "org.mockito:mockito-core:3.+"
 }
 
 intellij {
@@ -31,6 +32,7 @@ intellij {
     ideaDependencyCachePath = project.buildDir
 }
 
+buildSearchableOptions.enabled = false
 buildSearchableOptions {
     jbrVersion = '11_0_2b304'
 }
