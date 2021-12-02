@@ -22,7 +22,7 @@ dependencies {
 
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
-    
+
     testImplementation "org.mockito:mockito-core:3.+"
     testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.9'
     testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.9'
@@ -37,21 +37,12 @@ intellij {
 }
 
 buildSearchableOptions.enabled = false
-buildSearchableOptions {
-    jbrVersion = '11_0_2b304'
-}
 
 jar {
     manifestContentCharset 'utf-8'
     metadataCharset 'utf-8'
-    from {
-        configurations.compile.collect {
-            // 打印出加入的依赖包, 便于检查
-            println("Including file: ${it.name}")
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }
 }
+
 sourceSets {
     main.java.srcDirs = ['src/main/java']
     main.resources.srcDir 'src/resources'
